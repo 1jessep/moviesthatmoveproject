@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./amanda/css/movie.css">
+    <title>Amanda's Feature Branch</title>
+</head>  
+
+<header>
+    <div class="title background-img">
+        <h1>Movies that Move</h1>
+    </div>
+    <div>
+        <img id="clapper-gif" src="amanda/images/clapper-wo-bg.gif" alt="Movie Clapper gif">
+    </div>
+</header>
+
+<body>
+    <!-- Section containing the columns for webpages content -->
+    <!-- Will include the following:
+        1. 'IN THEATERS' API search times
+        2. Movie posters with links to Youtube trailers
+        3. Rotten tomatoes with link to website
+        4. Reddit with link to website -->
+
+
+    <!-- Content using CSS flexbox -->
+    <div id="flexbox-container">
+        <!-- Using API to fetch movies theaters nearby and movies now playing -->
+        <div class="flex-item fb-1">
+            <img class="style-img img-opacity" id="theaters-img" src="amanda/images/movie-theater.jpeg" alt="IN THEATERS">
+        </div>
+        <div class="flex-item fb-2">
+            <img class="style-img img-opacity" id="youtube-img" src="amanda/images/tv-static.gif" alt="Movie trailers on YouTube">
+            <div class="img-link">
+                <p class="link-name"></p>
+                <a href="https://www.youtube.com/results?search_query=movie+trailers+in+theaters+now"></a>
+            </div>
+        </div>
+        <div class="flex-item fb-3">
+            <img class="style-img img-opacity" id="rotten-tomatoes-img" src="amanda/images/rotten-tomatoes.jpeg" alt="Rotten Tomates">
+            <div>
+                <a href=""></a>
+            </div>
+        </div>
+        
+        <div class="flex-item fb-4">
+            <img class="style-img img-opacity" id="reddit-img" src="amanda/images/reddit.png" alt="Reddit">
+            <div>
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="footer">
+            <h4 class="watchlist-text">WATCHLIST &#127871</h4>
+        </div>
+        <!-- Local storage for users watchlist -->
+        
+        
+    </div>
+        <!-- Center Image -->
+        <div id="vision-div">
+            <img id="vision-img" src="amanda/images/vision.png" alt="Marvel Character(Vision)">
+        </div>
+
+        <!-- Image -->
+        <img id="spiderman-img" src="amanda/images/spiderman.png" alt="Spiderman gif">
+    
+        
+    
+    <!-- Bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="amanda/js/movie.js"></script>
+</body>
+</html>
