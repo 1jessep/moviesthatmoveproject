@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies That Move</title>
-    <link rel="stylesheet" href="watchlist.css">
+    <script src="https://kit.fontawesome.com/5e901498e6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/watchlist.css">
 </head>
+
 <body>
     <header class="header">
-        <h1>Movies That Move 🍿</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="home.html">Home</a>
-                </li>
-                <li>
-                    <a href="theaters.html">In Theaters</a>
-                </li>
-                <li>
-                    <a href="reviews.html">Reviews</a>
-                </li>
-                <li>
-                    <a href="watchlist.html">Watch List</a>
-                </li>
-            </ul>
-        </nav>
+        <h1>Save all of your favorite movies 🎬 to your Watchlist 🍿</h1>
     </header>
-    <aside class="theater"></aside>
 
-    <div class="container">
-        <h2>Save all the movies you want to watch later.</h2>
-    </div>
-    
-    <footer class="footer">
-        <h4>A Movies That Move Production 🍿</h4>
-        <p>Brought to you Live By The Code Web Services 2022 Inc ©️</p>
+    <main class="main">
+        <div class="listContainer">
+            <div class="list">
+                <h1>WatchList 🍿</h1>
+                <form class="form">
+                    <input type="text" class="input" placeholder="Add to WatchList">
+                    <button type="submit" class="saveBtn">&plus;</button>
+                </form>
+                <ul id="title">
+                </ul>
+            </div>
+        </div>
+    </main>
 
-    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
