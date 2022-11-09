@@ -13,7 +13,7 @@
 <body>
 
   <div class="container">
-    <div class="app">
+    <div class="watch">
       <h1>WATCHLIST</h1>
       <form>
         <input type="text" placeholder="Add new movie...">
@@ -21,10 +21,10 @@
       </form>
       <ul>
         <li>
-          <input type="checkbox" onclick="taskComplete(this)" class="check">
-          <input type="text" value="Best Movie Ever" class="task" onfocus="getCurrentTask(this)"
-            onblur="editTask(this)">
-          <i class="fa fa-trash" onclick="removeTask(this)"></i>
+          <input type="checkbox" onclick="titleComplete(this)" class="check">
+          <input type="text" value="Add you Favorite Movies🎬 " class="title" onfocus="getCurrentTitle(this)"
+            onblur="editTitle(this)">
+          <i class="fa fa-trash" onclick="removeTitle(this)"></i>
         </li>
       </ul>
     </div>
