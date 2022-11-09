@@ -10,10 +10,10 @@ document.querySelector("form").addEventListener("submit", e => {
 function loadTasks() {
   // check if localStorage has any tasks
   // if not then return
-  if (localStorage.getItem("tasks") == null) return;
+  if (localStorage.getItem("titles") == null) return;
 
   // Get the tasks from localStorage and convert it to an array
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = Array.from(JSON.parse(localStorage.getItem("titles")));
 
   // Loop through the tasks and add them to the list
   tasks.forEach(task => {
@@ -39,7 +39,7 @@ function addTask() {
   }
 
   // add task to local storage
-  localStorage.setItem("tasks", JSON.stringify([...JSON.parse(localStorage.getItem("tasks") || "[]"), { task: task.value, completed: false }]));
+  localStorage.setItem("titles", JSON.stringify([...JSON.parse(localStorage.getItem("titles") || "[]"), { task: task.value, completed: false }]));
 
   // create list item, add innerHTML and append to ul
   const li = document.createElement("li");
@@ -52,25 +52,25 @@ function addTask() {
 }
 
 function taskComplete(event) {
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = Array.from(JSON.parse(localStorage.getItem("titles")));
   tasks.forEach(task => {
     if (task.task === event.nextElementSibling.value) {
       task.completed = !task.completed;
     }
   });
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("titles", JSON.stringify(tasks));
   event.nextElementSibling.classList.toggle("completed");
 }
 
 function removeTask(event) {
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = Array.from(JSON.parse(localStorage.getItem("titles")));
   tasks.forEach(task => {
     if (task.task === event.parentNode.children[1].value) {
       // delete task
       tasks.splice(tasks.indexOf(task), 1);
     }
   });
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("titles", JSON.stringify(tasks));
   event.parentElement.remove();
 }
 
@@ -84,7 +84,7 @@ function getCurrentTask(event) {
 
 // edit the task and update local storage
 function editTask(event) {
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = Array.from(JSON.parse(localStorage.getItem("titles")));
   // check if task is empty
   if (event.value === "") {
     event.value = currentTask;
@@ -104,6 +104,6 @@ function editTask(event) {
     }
   });
   // update local storage
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("titles", JSON.stringify(tasks));
 }
   
