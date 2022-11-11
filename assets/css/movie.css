@@ -4,16 +4,17 @@
     text-decoration: none;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     background-color: black;
     margin: 0;
     padding: 0;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* ------------ */
 /* Header Items */
@@ -24,7 +25,7 @@ html {
     align-items: center;
 }
 
-/* Background image behind header */
+/* Background image behind header (layer) */
 .background-img {
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a8b65d83-54b0-4dd9-abaa-c392771d8df7/d3fkl60-3520e35d-78fa-421d-b7fa-e470af875448.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E4YjY1ZDgzLTU0YjAtNGRkOS1hYmFhLWMzOTI3NzFkOGRmN1wvZDNma2w2MC0zNTIwZTM1ZC03OGZhLTQyMWQtYjdmYS1lNDcwYWY4NzU0NDgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5GmWFKilY3btEiMWWc7clD4ydFXEC6QJj0YLJTNo2ow);
     background-size: 100vw 200px;
@@ -32,13 +33,13 @@ html {
 }
 
 header h1 {
+    position: relative;
+    /* Positioning the text (layer) above gif and background image */
+    z-index: 1;
     font-size: 80px;
     color: rgb(1, 63, 235);
     text-align: center;
     text-shadow: 2px 6px 3px rgb(255, 11, 247);
-    position: relative;
-    /* Text is above gif and background image */
-    z-index: 1;
 }
 
 /* ------------- */
@@ -67,7 +68,7 @@ header h1 {
     height: 100%;
 }
 
-/* Changing box-shadow for each flexbox (Alternating colors) */
+/* Changing box-shadow for each flexbox (Alternating colors when the webpage is larger than 1076px) */
 .fb-1 {
     position: relative;
     box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
@@ -122,7 +123,7 @@ header h1 {
     text-align: center;
 }
 
-/* Name of linked webpage(e.g. YouTube, Rotten Tomatoes) */
+/* Styling the button of linked webpage (e.g. YouTube, Rotten Tomatoes) */
 .div-name {
     background-color: rgb(1, 63, 235);
     color: white;
@@ -141,6 +142,7 @@ header h1 {
     right: 5px;
     z-index: 0;
 }
+
 /* Adding an image of a movie character to style up the webpage */
 #spiderman-img {
     position: absolute;
@@ -162,10 +164,10 @@ header h1 {
 }
 
 
-/* ------------------------------ */
-/* Links to API and local storage */
-/* ------------------------------ */
-/* Button where a user can add movies to a personal watchlist */
+/* -------------------------------- */
+/* Buttons to API and local storage */
+/* -------------------------------- */
+/* Button that takes users to the html where a user can add movies to a personal watchlist or the movie database search bar */
 .footer {
     position: fixed;
     min-width: 240px;
@@ -179,7 +181,7 @@ header h1 {
     background-color: rgb(0, 35, 132);
 }
 
-/* Text inside of fixed flexboxes (SEARCH MOVIES & WATCHLIST)*/
+/* Text inside of fixed div elements ('SEARCH MOVIES' & 'WATCHLIST') */
 .fixed-text {
     display: block;
     color: #fff;
@@ -192,7 +194,7 @@ header h1 {
 /* Media Queries */
 /* ------------- */
 @media screen and (min-width: 1076px) {
-    /* Changing the color of box-shadow so that when they flex, the colors are alternating */
+    /* Changing the color of box-shadow so that when they wrap, the colors are alternating */
     .fb-3 {
         box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
     
@@ -202,7 +204,7 @@ header h1 {
 }
 
 @media screen and (max-width: 1075px) {
-    /* Changing the color of box-shadow so that when they flex, the colors are alternating */
+    /* 1px gap when reducing the screen size */
     .fb-3 {
         box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
     
@@ -273,7 +275,6 @@ header h1 {
         background-color: rgb(0, 35, 132);
     }
     
-    /* Text inside of fixed flexbox */
     .watchlist-text {
         display: block;
         color: #fff;
