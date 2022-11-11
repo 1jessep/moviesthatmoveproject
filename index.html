@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/movie.css">
+    <title>Movies That Move</title>
+</head>  
+
+<header>
+    <div class="title background-img">
+        <h1>Movies that Move</h1>
+    </div>
+    <div>
+        <img id="clapper-gif" src="assets/images/clapper-wo-bg.gif" alt="Movie Clapper gif">
+    </div>
+</header>
+
+<body>
+    <!-- Section containing the columns for webpages content -->
+    <!-- Will include the following:
+        1. Theater room image/'IN THEATERS' API search times
+        2. TV static gif/link to Youtube trailers
+        3. Rotten tomatoes image/link to website
+        4. Reddit image/link to website -->
+
+
+    <!-- Content using CSS flexbox -->
+    <div id="flexbox-container">
+        <!-- Using API to fetch movies theaters nearby and movies now playing -->
+        <div class="flex-item flexbox-transition fb-1">
+            <img class="style-img img-opacity" id="theaters-img" src="assets/images/movie-theater.jpeg" alt="IN THEATERS">
+            <div class="img-link">
+                <!-- Link to html with locale theaters/movie showtimes API -->
+                <a href=#>
+                    <div class="div-name">
+                        IN THEATERS &#127916
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Link takes user to YouTube -->
+        <div class="flex-item flexbox-transition fb-2">
+            <img class="style-img img-opacity" id="youtube-img" src="assets/images/tv-static.gif" alt="Movie trailers on YouTube">
+            <div class="img-link">
+                <a href="https://www.youtube.com/results?search_query=movie+trailers+in+theaters+now">
+                    <div class="div-name">
+                        MOVIE TRAILERS &#128249
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex-item flexbox-transition fb-3">
+            <img class="style-img img-opacity" id="rotten-tomatoes-img" src="assets/images/rotten-tomatoes.jpeg" alt="Rotten Tomates">
+            <div class="img-link">
+                <a href="https://www.rottentomatoes.com/">
+                    <div class="div-name">
+                        ROTTEN TOMATOES &#127813
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="flex-item flexbox-transition fb-4">
+            <img class="style-img img-opacity" id="reddit-img" src="assets/images/reddit.png" alt="Reddit">
+            <div class="img-link">
+                <a href="https://www.reddit.com/">
+                    <div class="div-name">
+                    REDDIT &#128421
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Link of left of webpage -->
+        <aside>
+            <!-- Link to page movie database search bar -->
+            <a href=jessepSearchBar/index.html>
+                <div id="position-left" class="footer">
+                    <h4 class="fixed-text">
+                        SEARCH MOVIES &#128253
+                    </h4>
+                </div>
+            </a>
+        </aside>
+        <!-- Link of right of webpage -->
+        <aside>
+            <!-- Link to page with local storage for users' watchlist -->
+            <a href=original/index.html>
+                <div class="footer">
+                    <h4 class="fixed-text">
+                        WATCHLIST &#127871
+                    </h4>
+            </div>
+            </a>
+        </aside>
+        
+    </div>
+        <!-- Images -->
+        <img id="spiderman-img" src="assets/images/spiderman.png" alt="Spiderman gif">
+
+        <div id="vision-div">
+            <img id="vision-img" src="assets/images/vision.png" alt="Marvel Character(Vision)">
+        </div>
+
+    
+    <!-- Javascript -->
+    <script src="assets/js/movie.js"></script>
+</body>
+</html>
