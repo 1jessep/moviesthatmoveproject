@@ -1,21 +1,21 @@
-// On app load, get all tasks from localStorage
+// On app load, get all titles from localStorage
 window.onload = loadTitles;
 
-// On form submit add task
+// On form submit add title
 document.querySelector("form").addEventListener("submit", e => {
   e.preventDefault();
   addTitle();
 });
 
 function loadTitles() {
-  // check if localStorage has any tasks
+  // check if localStorage has any titles
   // if not then return
   if (localStorage.getItem("titles") == null) return;
 
-  // Get the tasks from localStorage and convert it to an array
+  // Get the titles from localStorage and convert it to an array
   let titles = Array.from(JSON.parse(localStorage.getItem("titles")));
 
-  // Loop through the tasks and add them to the list
+  // Loop through the titles and add them to the list
   titles.forEach(title => {
     const list = document.querySelector("ul");
     const li = document.createElement("li");
@@ -74,23 +74,23 @@ function removeTitle(event) {
   event.parentElement.remove();
 }
 
-// store current task to track changes
+// store current title to track changes
 var currentTitle = null;
 
-// get current task
+// get current title
 function getCurrentTitle(event) {
   currentTitle = event.value;
 }
 
-// edit the task and update local storage
-function editTask(event) {
+// edit the title and update local storage
+function editTitle(event) {
   let titles = Array.from(JSON.parse(localStorage.getItem("titles")));
-  // check if task is empty
+  // check if title is empty
   if (event.value === "") {
     event.value = currentTitle;
     return;
   }
-  // task already exist
+  // title already exist
   titles.forEach(title => {
     if (title.title === event.value) {
       event.value = currentTitle;
