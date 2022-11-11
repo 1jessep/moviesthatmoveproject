@@ -1,12 +1,23 @@
 * {
     font-family: 'Bebas Neue', cursive;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 html {
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
+/* ------------ */
+/* Header Items */
+/* ------------ */
 .title {
     display: flex;
     justify-content: center;
@@ -41,6 +52,7 @@ header h1 {
     margin-top: 50px;
 }
 
+/* Containing the image content */
 .flex-item {
     width: 410px;
     height: 240px;
@@ -48,74 +60,75 @@ header h1 {
     border: 15px solid rgb(27, 27, 27);
 }
 
-/* Changing box-shadow for each flexbox (Alternating colors) */
-.fb-1 {
-    box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
-}
-
-.fb-2 {
-    box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
-}
-
-.fb-3 {
-    box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
-}
-
-.fb-4 {
-    box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
-}
-
-/* Button where a user can add movies to a personal watchlist */
-.footer {
-    position: fixed;
-    min-width: 300px;
-    min-height: 40px;
-    margin: 0px;
-    border: 2px solid rgb(255, 11, 247);
-    box-shadow: 0px 0px 2px 2px rgb(255, 11, 247);
-    border-radius: 10px;
-    bottom: 4px;
-    right: 20px;
-    background-color: rgb(0, 46, 53);
-}
-
-.watchlist-text {
-    display: block;
-    color: #fff;
-    text-align: center;
-    font-size: 30px;
-    margin: 15px;
-}
-
-/* ---------- */
-/* Styling image to fill the flexbox */
+/* Styling image to cover the entire space of the flexbox */
 .style-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
+/* Changing box-shadow for each flexbox (Alternating colors) */
+.fb-1 {
+    position: relative;
+    box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
+}
+
+.fb-2 {
+    position: relative;
+    box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
+}
+
+.fb-3 {
+    position: relative;
+    box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
+}
+
+.fb-4 {
+    position: relative;
+    box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
+}
+
+/* ----------------------------- */
+/* Using the pseudo-class, hover */
+/* ----------------------------- */
 /* Styling the image so the opacity changes when user hovers over it */
 .img-opacity {
-
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
 /* Using the pseudo-class 'hover' to show a clickable button that takes users to another link */
-.fb-1:hover .img-opacity {
+.flexbox-transition:hover .img-opacity {
     opacity: 0.5;
-    transition: 0.5s ease;
 }
-.fb-1:hover .img-link {
+
+.flexbox-transition:hover .img-link {
     opacity: 1;
 }
-/* ---------- */
 
 /* -------------------------- */
 /* Links to separate webpages */
 /* -------------------------- */
-
+/* Creates smooth transition to show user box is hovered over */
 .img-link {
- 
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Name of linked webpage(e.g. YouTube, Rotten Tomatoes) */
+.div-name {
+    background-color: rgb(1, 63, 235);
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 8px;
 }
 
 /* ---------------------- */
@@ -131,31 +144,63 @@ header h1 {
 /* Adding an image of a movie character to style up the webpage */
 #spiderman-img {
     position: absolute;
-    bottom: -230px;
-    left: -20px;
-    margin-bottom: 200px;
+    height: 200px;
+    top: 100px;
+    left: -10px;
 }
 
-/* Styling center image */
+/* Styling vision image below flexbox content */
 #vision-div {
-    margin-bottom: 200px;
+    margin-top: 20px;
+    margin-bottom: 170px;
     display: block;
     text-align: center;
 }
 
 #vision-img {
-    width: 400px;
+    width: 350px;
 }
 
-/* #center-img {
-    display: flex;
-    width: 100vw;
-} */
 
+/* ------------------------------ */
+/* Links to API and local storage */
+/* ------------------------------ */
+/* Button where a user can add movies to a personal watchlist */
+.footer {
+    position: fixed;
+    min-width: 240px;
+    min-height: 30px;
+    margin: 0px;
+    border: 2px solid rgb(139, 50, 255);
+    box-shadow: 0px 0px 2px 2px rgb(139, 50, 255);
+    border-radius: 10px;
+    bottom: 4px;
+    right: 20px;
+    background-color: rgb(0, 35, 132);
+}
+
+/* Text inside of fixed flexboxes (SEARCH MOVIES & WATCHLIST)*/
+.fixed-text {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+}
 
 /* ------------- */
 /* Media Queries */
 /* ------------- */
+@media screen and (min-width: 1076px) {
+    /* Changing the color of box-shadow so that when they flex, the colors are alternating */
+    .fb-3 {
+        box-shadow: 0px 0px 5px 4px rgb(255, 11, 247);
+    
+    }.fb-4 {
+        box-shadow: 0px 0px 5px 4px rgb(0, 164, 189);
+    }
+}
+
 @media screen and (max-width: 1075px) {
     /* Changing the color of box-shadow so that when they flex, the colors are alternating */
     .fb-3 {
@@ -167,7 +212,7 @@ header h1 {
 }
 
 /* Reducing font size so that gif does not move too far behind title */
-@media screen and (max-width: 702px) {
+@media screen and (max-width: 768px) {
     header h1 {
         font-size: 65px;
     }
@@ -198,6 +243,7 @@ header h1 {
         background-size: 100vw 130px;
         background-repeat: no-repeat;
     }
+
     /* Repositioning gif to fit inside background image */
     #clapper-gif {
         height: 100px;
@@ -205,5 +251,34 @@ header h1 {
         top: 30px;
         right: 2px;
         z-index: 0;
+    }
+
+    #spiderman-img {
+        position: absolute;
+        height: 140px;
+        top: 100px;
+        left: -10px;
+    }
+
+    .footer {
+        position: fixed;
+        min-width: 150px;
+        min-height: 25px;
+        margin: 0px;
+        border: 2px solid rgb(139, 50, 255);
+        box-shadow: 0px 0px 2px 2px rgb(139, 50, 255);
+        border-radius: 10px;
+        bottom: 4px;
+        right: 20px;
+        background-color: rgb(0, 35, 132);
+    }
+    
+    /* Text inside of fixed flexbox */
+    .watchlist-text {
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        margin: 15px;
     }
 }

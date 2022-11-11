@@ -1,20 +1,5 @@
-// Add event listener to image
-var theater = document.getElementById("theaters-img")
+// Positioning Movie Data base search bar button on left side of webpage
+var leftBtn = document.getElementById("position-left");
 
-theater.addEventListener("click", imageLink);
+leftBtn.setAttribute("style", "left: 20px; right: auto");
 
-var links = [
-    youtube = "https://www.youtube.com/results?search_query=movie+trailers+in+theaters+now",
-    rottenTomatoes = "",
-    reddit = "",
-]
-
-function imageLink() {
-    // Creating anchor element for images
-    var anchorEl = document.createElement("a");
-    // Creating button to append link (a)
-    var redirectToLink = document.createElement("button");
-    anchorEl.appendChild(redirectToLink);
-    // Link to separate webpage
-    
-}
