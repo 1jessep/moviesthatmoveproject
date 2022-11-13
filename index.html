@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/movie.css">
     <title>Movies That Move</title>
@@ -19,12 +18,13 @@
         <h1>Movies that Move</h1>
     </div>
     <div>
+        <!-- Image of a film clapperboard (gif) -->
         <img id="clapper-gif" src="assets/images/clapper-wo-bg.gif" alt="Movie Clapper gif">
     </div>
 </header>
 
 <body>
-    <!-- Section containing the columns for webpages content -->
+    <!-- Section containing the flexbox containers for the webpages content -->
     <!-- Will include the following:
         1. Theater room image/'IN THEATERS' API search times
         2. TV static gif/link to Youtube trailers
@@ -34,12 +34,12 @@
 
     <!-- Content using CSS flexbox -->
     <div id="flexbox-container">
-        <!-- Using API to fetch movies theaters nearby and movies now playing -->
+        <!-- Link to local theaters -->
         <div class="flex-item flexbox-transition fb-1">
             <img class="style-img img-opacity" id="theaters-img" src="assets/images/movie-theater.jpeg" alt="IN THEATERS">
             <div class="img-link">
                 <!-- Link to html with locale theaters/movie showtimes API -->
-                <a href=#>
+                <a href="https://www.amctheatres.com/movie-theatres">
                     <div class="div-name">
                         IN THEATERS &#127916
                     </div>
@@ -82,7 +82,8 @@
         <!-- Link of left of webpage -->
         <aside>
             <!-- Link to page movie database search bar -->
-            <a href=jessepSearchBar/index.html>
+            <!-- Using API to fetch movie information -->
+            <a href=moviedatabase.html>
                 <div id="position-left" class="footer">
                     <h4 class="fixed-text">
                         SEARCH MOVIES &#128253
@@ -93,7 +94,7 @@
         <!-- Link of right of webpage -->
         <aside>
             <!-- Link to page with local storage for users' watchlist -->
-            <a href=original/index.html>
+            <a href=redo.html>
                 <div class="footer">
                     <h4 class="fixed-text">
                         WATCHLIST &#127871
